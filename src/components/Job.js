@@ -1,12 +1,11 @@
 // job detail component
 
 import React, { Component } from 'react';
-import ReactHTMLParser, { processNodes, convertNodeToElement, htmlparser2} from 'react-html-parser';
+import ReactHTMLParser from 'react-html-parser';
 import { Link } from 'react-router-dom';
 
 import {pullOneJob} from '../actions/searchActions';
 import { connect } from 'react-redux';
-import { JobContainer } from './JobContainer';
 
 
 export class JobDetail extends Component {
@@ -61,14 +60,14 @@ export class JobDetail extends Component {
                   </div>
                     </div>
                 <div className="col-lg-4">
-                    <div className="job_sumary">
-                        <div className="summery_header">
+                    <div className="job_summary">
+                        <div className="summary_header">
                             <h3>Job Summary</h3>
                         </div>
                         <div className="job_content">
                             <ul>
                                 <li>Published on: <span>{this.props.job.created_at}</span></li>
-                                <li>Salary: <span>50k - 120k/y</span></li>
+                                <li>Salary: <span>70k - 120k/y</span></li>
                                 <li>Location: <span>{this.props.job.location}</span></li>
                                 <li>Job Nature: <span> {this.props.job.type}</span></li>
                             </ul>
